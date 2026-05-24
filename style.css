@@ -1,0 +1,310 @@
+/* -----------------------------------------------
+   TYPOGRAPHY REFINEMENT — premium, readable, calm
+   Inter for UI + Playfair Display for quotes
+   Improved spacing rhythm and visual hierarchy
+   No gradients, no glass, no decoration
+----------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050505;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* main card — architectural, solid */
+.card {
+  background: #0c0c0c;
+  max-width: 820px;
+  width: 100%;
+  padding: 2.8rem;
+  border: 1px solid #1f1f1f;
+  border-radius: 0px;
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.8);
+}
+
+/* header with modern separation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.context-badge {
+  font-family: 'Inter', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #e0a800;
+  background: #1a1a1a;
+  padding: 0.3rem 0.9rem;
+  text-transform: uppercase;
+  border-left: 2px solid #e0a800;
+}
+
+/* quote stage — primary focus, spacious */
+.quote-stage {
+  margin: 2.2rem 0 2.8rem 0;
+}
+
+.quote-container {
+  background: #080808;
+  padding: 2.8rem 2.5rem;
+  border-left: 3px solid #e0a800;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* QUOTE TEXT — serif font for elegance and contrast */
+.quote-text {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.9rem;
+  font-weight: 450;
+  line-height: 1.75;
+  letter-spacing: -0.002em;
+  color: #f2f2f2;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+/* AUTHOR STYLING — muted, compact, UI font */
+.quote-author {
+  font-family: 'Inter', monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #888;
+  letter-spacing: 0.02em;
+  border-top: 1px solid #1c1c1c;
+  display: inline-block;
+  padding-top: 0.9rem;
+  text-transform: none;
+}
+
+/* motion animation classes (preserved) */
+.fade-out {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.2s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+/* mode buttons — consistent Inter typography */
+.mode-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.mode-btn {
+  flex: 1;
+  background: #121212;
+  border: 1px solid #262626;
+  color: #b0b0b0;
+  font-family: 'Inter', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 0.9rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.mode-icon {
+  font-size: 1.1rem;
+}
+
+.mode-btn:hover {
+  background: #1c1c1c;
+  border-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+.mode-btn.active {
+  background: #1a1a1a;
+  border-color: #e0a800;
+  color: #ffffff;
+  border-bottom: 2px solid #e0a800;
+}
+
+/* action bar — utility buttons */
+.action-bar {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 2rem;
+  margin-top: 0.2rem;
+}
+
+.action-btn {
+  background: #0f0f0f;
+  border: 1px solid #232323;
+  padding: 0.65rem 1.3rem;
+  font-family: 'Inter', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #aaaaaa;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-btn svg {
+  transition: transform 0.1s ease;
+}
+
+.action-btn:hover {
+  background: #181818;
+  color: #ffffff;
+  border-color: #3a3a3a;
+}
+
+.action-btn:hover svg {
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: translateY(1px);
+}
+
+/* copy feedback */
+.copy-feedback-temp {
+  color: #e0a800;
+  margin-left: 0.4rem;
+  font-size: 0.7rem;
+  font-family: 'Inter', monospace;
+}
+
+/* loading state */
+.loading-placeholder {
+  color: #666;
+  font-weight: 400;
+}
+
+/* responsive adjustments — maintain readability on smaller screens */
+@media (max-width: 680px) {
+  body {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .quote-text {
+    font-size: 1.5rem;
+    line-height: 1.65;
+  }
+  
+  .quote-container {
+    padding: 1.8rem 1.5rem;
+  }
+  
+  .quote-stage {
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .mode-btn {
+    font-size: 0.8rem;
+    padding: 0.7rem 0.3rem;
+  }
+  
+  .action-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  
+  .action-btn {
+    padding: 0.55rem 1rem;
+  }
+}
+
+/* medium screens fine-tuning */
+@media (min-width: 681px) and (max-width: 900px) {
+  .quote-text {
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
+  
+  .quote-container {
+    padding: 2.2rem 2rem;
+  }
+}
+
+/* extra large screens — breathing room */
+@media (min-width: 1400px) {
+  .card {
+    max-width: 920px;
+    padding: 3.2rem;
+  }
+  
+  .quote-text {
+    font-size: 2.1rem;
+    line-height: 1.8;
+  }
+  
+  .quote-container {
+    padding: 3rem 2.8rem;
+  }
+  
+  .quote-stage {
+    margin: 2.5rem 0 3rem 0;
+  }
+}
+
+/* subtle refinements for vertical rhythm */
+.quote-text + .quote-author {
+  margin-top: 0.25rem;
+}
+
+/* ensure no extra decoration */
+hr {
+  border: none;
+  border-top: 1px solid #1a1a1a;
+  margin: 1rem 0;
+}
