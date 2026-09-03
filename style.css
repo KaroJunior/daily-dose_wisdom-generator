@@ -308,3 +308,51 @@ hr {
   border-top: 1px solid #1a1a1a;
   margin: 1rem 0;
 }
+
+/* === Footer with backlinks === */
+.site-footer {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: #666;
+  font-family: 'Inter', monospace;
+}
+
+.footer-links a {
+  color: #e0a800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 400;
+}
+
+.footer-links a:hover {
+  color: #f5c821;
+  text-decoration: underline;
+}
+
+.footer-separator {
+  color: #e0a800;
+  user-select: none;
+}
+
+/* Responsive footer */
+@media (max-width: 680px) {
+  .site-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+  
+  .footer-links {
+    font-size: 0.7rem;
+    gap: 6px;
+  }
+}
